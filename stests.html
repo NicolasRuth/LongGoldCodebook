@@ -1,0 +1,163 @@
+<html>
+
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>Title</title>
+</head>
+
+<body>
+
+<p>Here you can select all tests of interest</p>
+
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com"># Input: Select tests ----</span>
+<span class="hl kwd">library</span><span class="hl std">(shiny)</span>
+<span class="hl kwd">checkboxGroupInput</span><span class="hl std">(</span><span class="hl str">&quot;tests&quot;</span><span class="hl std">,</span> <span class="hl str">&quot;Select tests of interest&quot;</span><span class="hl std">,</span>
+                               <span class="hl kwc">choices</span> <span class="hl std">=</span> <span class="hl kwd">c</span><span class="hl std">(</span><span class="hl str">&quot;Beat Perception Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;bat&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Emotion Discrimination Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;edt&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Working Memory Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;jaj&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Melody Discrimination&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;mdt&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Matrix reasoning IQ Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;miq&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Musical Preference Assessment via soundclips&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;mps&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Mistuning Perception Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;mpt&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Rhythm Ability Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;rat&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Sound Similarity Sorting Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;sss&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Pitch Imagery Arrows Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;pit&quot;</span><span class="hl std">,</span>
+                                           <span class="hl str">&quot;Backward Digit Span Working Memory Test&quot;</span> <span class="hl std">=</span> <span class="hl str">&quot;bds&quot;</span>
+                                           <span class="hl std">),</span>
+                               <span class="hl kwc">selected</span> <span class="hl std">=</span> <span class="hl str">&quot;bat&quot;</span><span class="hl std">)</span>
+</pre></div>
+<!--html_preserve--><div id="tests" class="form-group shiny-input-checkboxgroup shiny-input-container">
+<label class="control-label" for="tests">Select tests of interest</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="bat" checked="checked"/>
+<span>Beat Perception Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="edt"/>
+<span>Emotion Discrimination Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="jaj"/>
+<span>Working Memory Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="mdt"/>
+<span>Melody Discrimination</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="miq"/>
+<span>Matrix reasoning IQ Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="mps"/>
+<span>Musical Preference Assessment via soundclips</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="mpt"/>
+<span>Mistuning Perception Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="rat"/>
+<span>Rhythm Ability Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="sss"/>
+<span>Sound Similarity Sorting Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="pit"/>
+<span>Pitch Imagery Arrows Test</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="tests" value="bds"/>
+<span>Backward Digit Span Working Memory Test</span>
+</label>
+</div>
+</div>
+</div><!--/html_preserve--></div></div>
+
+</body>
+</html>

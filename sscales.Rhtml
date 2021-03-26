@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<title>Select scale</title>
+</head>
+
+<body>
+
+<p>Here you can select all scales of interest</p>
+
+<!--begin.rcode
+library(shiny)
+   # Input: Select scale ----
+            checkboxGroupInput("scales", "Select scales",
+                       choices = c("Concurrent Musical Activities" = "ccm",
+                                   "Drama Activity" = "dac",
+                                   "Demographics" = "deg",
+                                   "Goldsmiths Musical Sophistication Index" = "gms",
+                                   "Social Desirabilit (Lie) Scale" = "lie",
+                                   "Musical Home Environment" = "mhe",
+                                   "Physical Activity Questionnaire for Older Children" = "pac",
+                                   "Academic Self Concept" = "sca",
+                                   "Social Self Concept" = "scs",
+                                   "Strengths and Difficulties Questionnaire" = "sdq",
+                                   "School Engagement Measurement" = "sem",
+                                   "Socio-economic Status" = "ses",
+                                   "Student Opinion Scale" = "sos",
+                                   "Theory of Intelligence" = "toi",
+                                   "Theory of Musicality" = "tom",
+                                   "Ten Item Personality Inventory" = "tip"
+                                   ),
+                       selected = "gms")
+end.rcode-->
+
+</body>
+</html>

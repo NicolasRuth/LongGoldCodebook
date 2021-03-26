@@ -1,0 +1,13 @@
+name: cb_app
+title: cb_app
+username:
+account: nickruth
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2933139
+bundleId: 3852426
+url: https://nickruth.shinyapps.io/cb_app/
+when: 1605193451.39947
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: glossary.Rhtml|introduction.Rhtml|sscales.Rhtml|stests.html|stests.Rhtml|script_klaus/app.R|script_klaus/util.R

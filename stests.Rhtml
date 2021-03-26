@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<title>Select Tests</title>
+</head>
+
+<body>
+
+<p>Here you can select all tests of interest</p>
+
+<!--begin.rcode
+# Input: Select tests ----
+library(shiny)
+checkboxGroupInput("tests", "Select tests of interest",
+                               choices = c("Beat Perception Test" = "bat",
+                                           "Emotion Discrimination Test" = "edt",
+                                           "Working Memory Test" = "jaj",
+                                           "Melody Discrimination" = "mdt",
+                                           "Matrix reasoning IQ Test" = "miq",
+                                           "Musical Preference Assessment via soundclips" = "mps",
+                                           "Mistuning Perception Test" = "mpt",
+                                           "Rhythm Ability Test" = "rat",
+                                           "Sound Similarity Sorting Test" = "sss",
+                                           "Pitch Imagery Arrows Test" = "pit",
+                                           "Backward Digit Span Working Memory Test" = "bds"
+                                           ),
+                               selected = "bat")
+end.rcode-->
+
+</body>
+</html>
